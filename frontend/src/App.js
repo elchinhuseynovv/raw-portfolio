@@ -31,6 +31,9 @@ const VoidStudiosApp = () => {
 
   return (
     <div className="void-studios">
+      {/* Custom Cursor - Global */}
+      <CustomCursor />
+      
       {/* Navigation Header - shown on all pages */}
       <Header />
       
