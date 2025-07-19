@@ -30,7 +30,7 @@ const CustomCursor = () => {
         const deltaY = mousePosition.y - prevPosition.y;
         
         // Adjust this value to control the lag amount (0.1 = more lag, 0.5 = less lag)
-        const lagFactor = 0.15;
+        const lagFactor = 0.12;
         
         return {
           x: prevPosition.x + deltaX * lagFactor,
@@ -68,18 +68,19 @@ const CustomCursor = () => {
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
         style={{
-          transform: `translate(${cursorPosition.x - 20}px, ${cursorPosition.y - 20}px)`,
+          transform: `translate(${cursorPosition.x - 25}px, ${cursorPosition.y - 25}px)`,
         }}
       >
-        {/* Outer circle with subtle border */}
-        <div className="relative">
-          <div className="w-10 h-10 border-2 border-white/40 rounded-full backdrop-blur-sm">
-            {/* Inner circle */}
-            <div className="w-2 h-2 bg-white/80 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+        {/* Main cursor circle */}
+        <div className="relative w-12 h-12">
+          {/* Outer circle with more visible border */}
+          <div className="w-12 h-12 border-2 border-white rounded-full backdrop-blur-sm bg-white/10">
+            {/* Inner circle - more prominent */}
+            <div className="w-3 h-3 bg-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg"></div>
           </div>
           
           {/* Subtle glow effect */}
-          <div className="absolute inset-0 w-10 h-10 bg-white/10 rounded-full blur-sm"></div>
+          <div className="absolute inset-0 w-12 h-12 bg-white/20 rounded-full blur-md"></div>
         </div>
       </div>
     </>
