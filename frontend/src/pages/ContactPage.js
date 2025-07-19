@@ -1,0 +1,354 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { useInView as useInViewHook } from 'react-intersection-observer';
+
+const ContactPage = () => {
+  return (
+    <div className="contact-page">
+      {/* Hero Section */}
+      <ContactHeroSection />
+      
+      {/* Contact Form Section */}
+      <ContactFormSection />
+      
+      {/* Office Info Section */}
+      <OfficeInfoSection />
+      
+      {/* Connect Section */}
+      <ConnectSection />
+    </div>
+  );
+};
+
+const ContactHeroSection = () => {
+  const [ref, inView] = useInViewHook({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+
+  return (
+    <section 
+      ref={ref}
+      className="min-h-screen bg-gradient-to-b from-[#F5DDD1] via-[#E8C4B0] to-[#DEB499] flex items-center justify-center relative overflow-hidden"
+    >
+      <div className="text-center px-4 max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="relative"
+        >
+          <h1 className="text-[8rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] font-black text-white/70 leading-none tracking-tight">
+            CONTACT
+          </h1>
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+            className="text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-black text-white/50 leading-none tracking-tight -mt-8"
+          >
+            US
+          </motion.h2>
+        </motion.div>
+        
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 1, delay: 0.8 }}
+          className="text-white/60 text-lg md:text-xl mt-12 max-w-3xl mx-auto font-light tracking-wide leading-relaxed"
+        >
+          Ready to create something extraordinary together? Let's start a conversation about your next project. We're here to transform your vision into compelling visual narratives that drive results.
+        </motion.p>
+      </div>
+    </section>
+  );
+};
+
+const ContactFormSection = () => {
+  const [ref, inView] = useInViewHook({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    project: '',
+    message: ''
+  });
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    // Add form submission logic here
+  };
+
+  return (
+    <section 
+      ref={ref}
+      className="min-h-screen bg-gradient-to-b from-[#DEB499] to-[#D1A887] flex items-center justify-center relative py-20"
+    >
+      <div className="max-w-4xl mx-auto px-8 w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-[4rem] md:text-[6rem] lg:text-[8rem] font-black text-white/60 leading-none tracking-tight mb-8">
+            GET IN TOUCH
+          </h1>
+        </motion.div>
+        
+        <motion.form
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1, delay: 0.3 }}
+          onSubmit={handleSubmit}
+          className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-6"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-white/70 text-sm font-light mb-2">Name *</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-white/40 transition-colors"
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-white/70 text-sm font-light mb-2">Email *</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-white/40 transition-colors"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-white/70 text-sm font-light mb-2">Company</label>
+              <input
+                type="text"
+                name="company"
+                value={formData.company}
+                onChange={handleInputChange}
+                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-white/40 transition-colors"
+                placeholder="Your company"
+              />
+            </div>
+            <div>
+              <label className="block text-white/70 text-sm font-light mb-2">Project Type</label>
+              <select
+                name="project"
+                value={formData.project}
+                onChange={handleInputChange}
+                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white/40 transition-colors"
+              >
+                <option value="" className="bg-gray-800">Select project type</option>
+                <option value="luxury-travel" className="bg-gray-800">Luxury Travel</option>
+                <option value="documentary" className="bg-gray-800">Documentary</option>
+                <option value="branded-content" className="bg-gray-800">Branded Content</option>
+                <option value="tourism" className="bg-gray-800">Tourism & Destinations</option>
+                <option value="streaming" className="bg-gray-800">Streaming Platform</option>
+                <option value="other" className="bg-gray-800">Other</option>
+              </select>
+            </div>
+          </div>
+          
+          <div>
+            <label className="block text-white/70 text-sm font-light mb-2">Message *</label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleInputChange}
+              rows="6"
+              className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-white/40 transition-colors resize-none"
+              placeholder="Tell us about your project..."
+              required
+            ></textarea>
+          </div>
+          
+          <motion.button
+            type="submit"
+            className="w-full bg-white/20 hover:bg-white/30 border border-white/30 rounded-lg px-8 py-4 text-white font-light tracking-wider transition-all duration-300"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            SEND MESSAGE
+          </motion.button>
+        </motion.form>
+      </div>
+    </section>
+  );
+};
+
+const OfficeInfoSection = () => {
+  const [ref, inView] = useInViewHook({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+
+  const contactInfo = [
+    {
+      title: "EMAIL",
+      details: ["hello@voidstudios.com", "projects@voidstudios.com"],
+      icon: "✉"
+    },
+    {
+      title: "PHONE",
+      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
+      icon: "☎"
+    },
+    {
+      title: "OFFICE",
+      details: ["123 Creative District", "Los Angeles, CA 90210"],
+      icon: "📍"
+    }
+  ];
+
+  return (
+    <section 
+      ref={ref}
+      className="min-h-screen bg-gradient-to-b from-[#D1A887] to-[#C8956D] flex items-center justify-center relative py-20"
+    >
+      <div className="max-w-7xl mx-auto px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="text-center mb-20"
+        >
+          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-white/60 leading-none tracking-tight mb-8">
+            REACH US
+          </h1>
+        </motion.div>
+        
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 1.2, delay: 0.2 }}
+            className="flex-1"
+          >
+            <img 
+              src="https://images.unsplash.com/photo-1554104683-c7063687d649"
+              alt="Office"
+              className="w-full h-96 object-cover rounded-2xl shadow-2xl"
+            />
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 1.2, delay: 0.4 }}
+            className="flex-1 space-y-8"
+          >
+            {contactInfo.map((info, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 1, delay: 0.6 + (index * 0.2) }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
+              >
+                <div className="flex items-center mb-3">
+                  <span className="text-2xl mr-3">{info.icon}</span>
+                  <h3 className="text-xl font-bold text-white/80">{info.title}</h3>
+                </div>
+                {info.details.map((detail, idx) => (
+                  <p key={idx} className="text-white/60 font-light mb-1">{detail}</p>
+                ))}
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ConnectSection = () => {
+  const [ref, inView] = useInViewHook({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+
+  const socialLinks = [
+    { name: "INSTAGRAM", handle: "@voidstudios" },
+    { name: "LINKEDIN", handle: "/company/void-studios" },
+    { name: "TWITTER", handle: "@voidstudios" },
+    { name: "VIMEO", handle: "/voidstudios" },
+    { name: "YOUTUBE", handle: "/voidstudios" }
+  ];
+
+  return (
+    <section 
+      ref={ref}
+      className="min-h-screen bg-gradient-to-b from-[#C8956D] to-[#481500] flex items-center justify-center relative"
+    >
+      <div className="max-w-7xl mx-auto px-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        >
+          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-white/60 leading-none tracking-tight mb-12">
+            CONNECT
+          </h1>
+          <p className="text-white/50 text-lg max-w-3xl mx-auto font-light leading-relaxed mb-16">
+            Follow our journey and stay updated with our latest projects and insights
+          </p>
+        </motion.div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-16">
+          {socialLinks.map((link, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.3 + (index * 0.1) }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/15 transition-all duration-300 cursor-pointer group"
+            >
+              <h3 className="text-white/70 font-bold mb-2 group-hover:text-white/90 transition-colors">{link.name}</h3>
+              <p className="text-white/50 text-sm font-light">{link.handle}</p>
+            </motion.div>
+          ))}
+        </div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1, delay: 1.5 }}
+          className="space-y-4"
+        >
+          <div className="text-white/30 text-lg tracking-[0.2em] font-light">
+            LET'S CREATE SOMETHING EXTRAORDINARY
+          </div>
+          <div className="text-white/20 text-sm tracking-widest font-light">
+            © 2025 VOID STUDIOS • SUSTAINABLE STORYTELLING
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactPage;
