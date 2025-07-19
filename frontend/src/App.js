@@ -32,26 +32,146 @@ const VoidStudiosClone = () => {
 };
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <motion.header 
-      className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-8"
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.2 }}
+    <>
+      <motion.header 
+        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-8"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <motion.div 
+          className="text-white text-2xl font-light tracking-wider cursor-pointer"
+          whileHover={{ scale: 1.05 }}
+          onClick={closeMenu}
+        >
+          VOID
+        </motion.div>
+        <motion.div 
+          className="text-white text-sm font-light tracking-widest cursor-pointer hover:text-gray-300 transition-colors"
+          whileHover={{ scale: 1.05 }}
+          onClick={toggleMenu}
+        >
+          GIMME MORE ✦✦✦
+        </motion.div>
+      </motion.header>
+
+      {/* Navigation Menu Overlay */}
+      <NavigationMenu isOpen={isMenuOpen} onClose={closeMenu} />
+    </>
+  );
+};
+
+const NavigationMenu = ({ isOpen, onClose }) => {
+  const menuItems = ['HOME', 'ABOUT', 'VIDEOS', 'FORBES', 'CONTACT'];
+
+  return (
+    <motion.div
+      className={`fixed inset-0 z-[100] bg-gradient-to-b from-[#F5DDD1] to-[#DEB499] ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: isOpen ? 1 : 0 }}
+      transition={{ duration: 0.5 }}
     >
-      <motion.div 
-        className="text-white text-2xl font-light tracking-wider"
-        whileHover={{ scale: 1.05 }}
+      {/* Close Button */}
+      <motion.button
+        className="absolute top-8 right-8 text-white text-2xl font-light hover:text-gray-300 transition-colors z-[110]"
+        onClick={onClose}
+        initial={{ opacity: 0, rotate: -90 }}
+        animate={{ opacity: isOpen ? 1 : 0, rotate: isOpen ? 0 : -90 }}
+        transition={{ duration: 0.3, delay: isOpen ? 0.2 : 0 }}
+        whileHover={{ scale: 1.1, rotate: 90 }}
+      >
+        ✕
+      </motion.button>
+
+      {/* VOID Logo */}
+      <motion.div
+        className="absolute top-8 left-8 text-white text-2xl font-light tracking-wider"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}
+        transition={{ duration: 0.5, delay: isOpen ? 0.1 : 0 }}
       >
         VOID
       </motion.div>
-      <motion.div 
-        className="text-white text-sm font-light tracking-widest cursor-pointer hover:text-gray-300 transition-colors"
-        whileHover={{ scale: 1.05 }}
+
+      {/* Navigation Items */}
+      <div className="flex items-center justify-center min-h-screen">
+        <motion.nav
+          className="text-center"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : 50 }}
+          transition={{ duration: 0.6, delay: isOpen ? 0.3 : 0 }}
+        >
+          {menuItems.map((item, index) => (
+            <motion.div
+              key={item}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : 30 }}
+              transition={{ 
+                duration: 0.5, 
+                delay: isOpen ? 0.4 + (index * 0.1) : 0,
+                ease: "easeOut"
+              }}
+              className="mb-6"
+            >
+              <HoverSlideText text={item} onClick={() => {
+                // Handle navigation here
+                console.log(`Navigate to ${item}`);
+                onClose();
+              }} />
+            </motion.div>
+          ))}
+        </motion.nav>
+      </div>
+    </motion.div>
+  );
+};
+
+const HoverSlideText = ({ text, onClick }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      className="relative overflow-hidden cursor-pointer"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
+    >
+      <motion.div
+        className="text-[4rem] md:text-[5rem] font-black text-white/80 leading-none tracking-tight"
+        animate={{
+          y: isHovered ? '-100%' : '0%',
+        }}
+        transition={{
+          duration: 0.4,
+          ease: [0.23, 1, 0.320, 1], // Custom cubic bezier for smooth easing
+        }}
       >
-        GIMME MORE ✦✦✦
+        {text}
       </motion.div>
-    </motion.header>
+      <motion.div
+        className="absolute top-0 left-0 text-[4rem] md:text-[5rem] font-black text-white leading-none tracking-tight"
+        animate={{
+          y: isHovered ? '0%' : '100%',
+        }}
+        transition={{
+          duration: 0.4,
+          ease: [0.23, 1, 0.320, 1], // Custom cubic bezier for smooth easing
+        }}
+      >
+        {text}
+      </motion.div>
+    </div>
   );
 };
 
