@@ -171,13 +171,48 @@ body {
   animation: fadeInUp 0.6s ease-out;
 }
 
-/* Performance optimizations */
-.will-change-transform {
-  will-change: transform;
+/* Custom hover effects for navigation */
+.hover-slide-text {
+  position: relative;
+  overflow: hidden;
 }
 
-.will-change-opacity {
-  will-change: opacity;
+.hover-slide-text .text-slide {
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.hover-slide-text:hover .text-original {
+  transform: translateY(-100%);
+}
+
+.hover-slide-text:hover .text-hover {
+  transform: translateY(0%);
+}
+
+.text-hover {
+  transform: translateY(100%);
+}
+
+/* Enhanced navigation animations */
+.navigation-overlay {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Smooth text animations */
+.text-reveal {
+  overflow: hidden;
+}
+
+.text-reveal-inner {
+  transform: translateY(100%);
+  animation: textReveal 0.8s ease-out forwards;
+}
+
+@keyframes textReveal {
+  to {
+    transform: translateY(0);
+  }
 }
 
 /* Smooth text rendering */
