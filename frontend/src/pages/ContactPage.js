@@ -29,7 +29,7 @@ const ContactHeroSection = () => {
   return (
     <section 
       ref={ref}
-      className="min-h-screen bg-gradient-to-b from-[#F5DDD1] via-[#E8C4B0] to-[#DEB499] flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen bg-gradient-to-b from-[#1a1a1a] via-[#111111] to-[#0a0a0a] flex items-center justify-center relative overflow-hidden"
     >
       <div className="text-center px-4 max-w-7xl mx-auto">
         <motion.div
@@ -38,14 +38,14 @@ const ContactHeroSection = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="relative"
         >
-          <h1 className="text-[8rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] font-black text-white/70 leading-none tracking-tight">
+          <h1 className="text-[8rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] font-black text-gray-200/80 leading-none tracking-tight">
             CONTACT
           </h1>
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-            className="text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-black text-white/50 leading-none tracking-tight -mt-8"
+            className="text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-black text-gray-300/60 leading-none tracking-tight -mt-8"
           >
             US
           </motion.h2>
@@ -55,7 +55,7 @@ const ContactHeroSection = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 1, delay: 0.8 }}
-          className="text-white/60 text-lg md:text-xl mt-12 max-w-3xl mx-auto font-light tracking-wide leading-relaxed"
+          className="text-gray-300/70 text-lg md:text-xl mt-12 max-w-3xl mx-auto font-light tracking-wide leading-relaxed"
         >
           Ready to create something extraordinary together? Let's start a conversation about your next project. We're here to transform your vision into compelling visual narratives that drive results.
         </motion.p>
@@ -94,7 +94,7 @@ const ContactFormSection = () => {
   return (
     <section 
       ref={ref}
-      className="min-h-screen bg-gradient-to-b from-[#DEB499] to-[#D1A887] flex items-center justify-center relative py-20"
+      className="min-h-screen bg-gradient-to-b from-[#0a0a0a] to-[#000000] flex items-center justify-center relative py-20"
     >
       <div className="max-w-4xl mx-auto px-8 w-full">
         <motion.div
@@ -103,7 +103,7 @@ const ContactFormSection = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h1 className="text-[4rem] md:text-[6rem] lg:text-[8rem] font-black text-white/60 leading-none tracking-tight mb-8">
+          <h1 className="text-[4rem] md:text-[6rem] lg:text-[8rem] font-black text-gray-200/70 leading-none tracking-tight mb-8">
             GET IN TOUCH
           </h1>
         </motion.div>
@@ -113,29 +113,29 @@ const ContactFormSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.3 }}
           onSubmit={handleSubmit}
-          className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-6"
+          className="bg-gray-900/30 backdrop-blur-sm rounded-2xl p-8 space-y-6"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-white/70 text-sm font-light mb-2">Name *</label>
+              <label className="block text-gray-300/80 text-sm font-light mb-2">Name *</label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-white/40 transition-colors"
+                className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-4 py-3 text-gray-200 placeholder-gray-400/50 focus:outline-none focus:border-gray-500/50 transition-colors"
                 placeholder="Your name"
                 required
               />
             </div>
             <div>
-              <label className="block text-white/70 text-sm font-light mb-2">Email *</label>
+              <label className="block text-gray-300/80 text-sm font-light mb-2">Email *</label>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-white/40 transition-colors"
+                className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-4 py-3 text-gray-200 placeholder-gray-400/50 focus:outline-none focus:border-gray-500/50 transition-colors"
                 placeholder="your@email.com"
                 required
               />
@@ -144,23 +144,23 @@ const ContactFormSection = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-white/70 text-sm font-light mb-2">Company</label>
+              <label className="block text-gray-300/80 text-sm font-light mb-2">Company</label>
               <input
                 type="text"
                 name="company"
                 value={formData.company}
                 onChange={handleInputChange}
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-white/40 transition-colors"
+                className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-4 py-3 text-gray-200 placeholder-gray-400/50 focus:outline-none focus:border-gray-500/50 transition-colors"
                 placeholder="Your company"
               />
             </div>
             <div>
-              <label className="block text-white/70 text-sm font-light mb-2">Project Type</label>
+              <label className="block text-gray-300/80 text-sm font-light mb-2">Project Type</label>
               <select
                 name="project"
                 value={formData.project}
                 onChange={handleInputChange}
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white/40 transition-colors"
+                className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-4 py-3 text-gray-200 focus:outline-none focus:border-gray-500/50 transition-colors"
               >
                 <option value="" className="bg-gray-800">Select project type</option>
                 <option value="luxury-travel" className="bg-gray-800">Luxury Travel</option>
@@ -174,13 +174,13 @@ const ContactFormSection = () => {
           </div>
           
           <div>
-            <label className="block text-white/70 text-sm font-light mb-2">Message *</label>
+            <label className="block text-gray-300/80 text-sm font-light mb-2">Message *</label>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleInputChange}
               rows="6"
-              className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-white/40 transition-colors resize-none"
+              className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-4 py-3 text-gray-200 placeholder-gray-400/50 focus:outline-none focus:border-gray-500/50 transition-colors resize-none"
               placeholder="Tell us about your project..."
               required
             ></textarea>
@@ -188,7 +188,7 @@ const ContactFormSection = () => {
           
           <motion.button
             type="submit"
-            className="w-full bg-white/20 hover:bg-white/30 border border-white/30 rounded-lg px-8 py-4 text-white font-light tracking-wider transition-all duration-300"
+            className="w-full bg-gray-700/30 hover:bg-gray-600/40 border border-gray-600/40 rounded-lg px-8 py-4 text-gray-200 font-light tracking-wider transition-all duration-300"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -227,7 +227,7 @@ const OfficeInfoSection = () => {
   return (
     <section 
       ref={ref}
-      className="min-h-screen bg-gradient-to-b from-[#D1A887] to-[#C8956D] flex items-center justify-center relative py-20"
+      className="min-h-screen bg-gradient-to-b from-[#000000] to-[#0a0a0a] flex items-center justify-center relative py-20"
     >
       <div className="max-w-7xl mx-auto px-8">
         <motion.div
@@ -236,7 +236,7 @@ const OfficeInfoSection = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="text-center mb-20"
         >
-          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-white/60 leading-none tracking-tight mb-8">
+          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-gray-200/70 leading-none tracking-tight mb-8">
             REACH US
           </h1>
         </motion.div>
@@ -267,14 +267,14 @@ const OfficeInfoSection = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 1, delay: 0.6 + (index * 0.2) }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
+                className="bg-gray-900/30 backdrop-blur-sm rounded-xl p-6"
               >
                 <div className="flex items-center mb-3">
                   <span className="text-2xl mr-3">{info.icon}</span>
-                  <h3 className="text-xl font-bold text-white/80">{info.title}</h3>
+                  <h3 className="text-xl font-bold text-gray-200/90">{info.title}</h3>
                 </div>
                 {info.details.map((detail, idx) => (
-                  <p key={idx} className="text-white/60 font-light mb-1">{detail}</p>
+                  <p key={idx} className="text-gray-300/70 font-light mb-1">{detail}</p>
                 ))}
               </motion.div>
             ))}
@@ -302,7 +302,7 @@ const ConnectSection = () => {
   return (
     <section 
       ref={ref}
-      className="min-h-screen bg-gradient-to-b from-[#C8956D] to-[#481500] flex items-center justify-center relative"
+      className="min-h-screen bg-gradient-to-b from-[#0a0a0a] to-[#000000] flex items-center justify-center relative"
     >
       <div className="max-w-7xl mx-auto px-8 text-center">
         <motion.div
@@ -310,10 +310,10 @@ const ConnectSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-white/60 leading-none tracking-tight mb-12">
+          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-gray-200/70 leading-none tracking-tight mb-12">
             CONNECT
           </h1>
-          <p className="text-white/50 text-lg max-w-3xl mx-auto font-light leading-relaxed mb-16">
+          <p className="text-gray-300/60 text-lg max-w-3xl mx-auto font-light leading-relaxed mb-16">
             Follow our journey and stay updated with our latest projects and insights
           </p>
         </motion.div>
@@ -325,10 +325,10 @@ const ConnectSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.3 + (index * 0.1) }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/15 transition-all duration-300 cursor-pointer group"
+              className="bg-gray-900/30 backdrop-blur-sm rounded-xl p-6 hover:bg-gray-900/50 transition-all duration-300 cursor-pointer group"
             >
-              <h3 className="text-white/70 font-bold mb-2 group-hover:text-white/90 transition-colors">{link.name}</h3>
-              <p className="text-white/50 text-sm font-light">{link.handle}</p>
+              <h3 className="text-gray-300/80 font-bold mb-2 group-hover:text-gray-200/90 transition-colors">{link.name}</h3>
+              <p className="text-gray-400/60 text-sm font-light">{link.handle}</p>
             </motion.div>
           ))}
         </div>
@@ -339,10 +339,10 @@ const ConnectSection = () => {
           transition={{ duration: 1, delay: 1.5 }}
           className="space-y-4"
         >
-          <div className="text-white/30 text-lg tracking-[0.2em] font-light">
+          <div className="text-gray-400/40 text-lg tracking-[0.2em] font-light">
             LET'S CREATE SOMETHING EXTRAORDINARY
           </div>
-          <div className="text-white/20 text-sm tracking-widest font-light">
+          <div className="text-gray-500/30 text-sm tracking-widest font-light">
             © 2025 VOID STUDIOS • SUSTAINABLE STORYTELLING
           </div>
         </motion.div>

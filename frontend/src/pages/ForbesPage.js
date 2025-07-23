@@ -29,7 +29,7 @@ const ForbesHeroSection = () => {
   return (
     <section 
       ref={ref}
-      className="min-h-screen bg-gradient-to-b from-[#F5DDD1] via-[#E8C4B0] to-[#DEB499] flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen bg-gradient-to-b from-[#1a1a1a] via-[#111111] to-[#0a0a0a] flex items-center justify-center relative overflow-hidden"
     >
       <div className="text-center px-4 max-w-7xl mx-auto">
         <motion.div
@@ -38,14 +38,14 @@ const ForbesHeroSection = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="relative"
         >
-          <h1 className="text-[8rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] font-black text-white/70 leading-none tracking-tight">
+          <h1 className="text-[8rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] font-black text-gray-200/80 leading-none tracking-tight">
             FORBES
           </h1>
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-            className="text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-black text-white/50 leading-none tracking-tight -mt-8"
+            className="text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-black text-gray-300/60 leading-none tracking-tight -mt-8"
           >
             RECOGNITION
           </motion.h2>
@@ -55,7 +55,7 @@ const ForbesHeroSection = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 1, delay: 0.8 }}
-          className="text-white/60 text-lg md:text-xl mt-12 max-w-3xl mx-auto font-light tracking-wide leading-relaxed"
+          className="text-gray-300/70 text-lg md:text-xl mt-12 max-w-3xl mx-auto font-light tracking-wide leading-relaxed"
         >
           Featured across leading publications for our groundbreaking approach to sustainable storytelling. From Forbes to Emmy® recognition, our work continues to shape the future of visual narrative.
         </motion.p>
@@ -94,7 +94,7 @@ const PressCoverageSection = () => {
   return (
     <section 
       ref={ref}
-      className="min-h-screen bg-gradient-to-b from-[#DEB499] to-[#D1A887] flex items-center justify-center relative"
+      className="min-h-screen bg-gradient-to-b from-[#0a0a0a] to-[#000000] flex items-center justify-center relative"
     >
       <div className="max-w-7xl mx-auto px-8">
         <motion.div
@@ -103,7 +103,7 @@ const PressCoverageSection = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="text-center mb-20"
         >
-          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-white/60 leading-none tracking-tight mb-8">
+          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-gray-200/70 leading-none tracking-tight mb-8">
             PRESS
           </h1>
         </motion.div>
@@ -118,10 +118,10 @@ const PressCoverageSection = () => {
               className="flex flex-col md:flex-row items-center gap-12"
             >
               <div className={`flex-1 ${index % 2 === 1 ? 'md:order-2' : ''}`}>
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-                  <div className="text-white/40 text-sm font-light tracking-wider mb-2">{item.publication} • {item.date}</div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-white/80 mb-4 leading-tight">{item.headline}</h3>
-                  <p className="text-white/60 text-lg font-light leading-relaxed">{item.excerpt}</p>
+                <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8">
+                  <div className="text-gray-400/50 text-sm font-light tracking-wider mb-2">{item.publication} • {item.date}</div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-200/90 mb-4 leading-tight">{item.headline}</h3>
+                  <p className="text-gray-300/70 text-lg font-light leading-relaxed">{item.excerpt}</p>
                 </div>
               </div>
               <div className={`flex-1 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
@@ -175,7 +175,7 @@ const AwardsSection = () => {
   return (
     <section 
       ref={ref}
-      className="min-h-screen bg-gradient-to-b from-[#D1A887] to-[#C8956D] flex items-center justify-center relative"
+      className="min-h-screen bg-gradient-to-b from-[#000000] to-[#0a0a0a] flex items-center justify-center relative"
     >
       <div className="max-w-7xl mx-auto px-8">
         <motion.div
@@ -184,10 +184,10 @@ const AwardsSection = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="text-center mb-20"
         >
-          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-white/60 leading-none tracking-tight mb-8">
+          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-gray-200/70 leading-none tracking-tight mb-8">
             AWARDS
           </h1>
-          <p className="text-white/50 text-lg max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-gray-300/60 text-lg max-w-3xl mx-auto font-light leading-relaxed">
             Industry recognition for our commitment to excellence in visual storytelling
           </p>
         </motion.div>
@@ -199,12 +199,12 @@ const AwardsSection = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1, delay: 0.3 + (index * 0.2) }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
+              className="bg-gray-900/30 backdrop-blur-sm rounded-2xl p-8 hover:bg-gray-900/50 transition-all duration-300"
             >
-              <div className="text-white/40 text-sm font-light tracking-wider mb-2">{award.year}</div>
-              <h3 className="text-2xl font-bold text-white/80 mb-2">{award.title}</h3>
-              <div className="text-white/60 font-medium mb-4">{award.category}</div>
-              <p className="text-white/60 font-light leading-relaxed">{award.description}</p>
+              <div className="text-gray-400/50 text-sm font-light tracking-wider mb-2">{award.year}</div>
+              <h3 className="text-2xl font-bold text-gray-200/90 mb-2">{award.title}</h3>
+              <div className="text-gray-300/70 font-medium mb-4">{award.category}</div>
+              <p className="text-gray-300/70 font-light leading-relaxed">{award.description}</p>
             </motion.div>
           ))}
         </div>
@@ -228,7 +228,7 @@ const MediaMentionsSection = () => {
   return (
     <section 
       ref={ref}
-      className="min-h-screen bg-gradient-to-b from-[#C8956D] to-[#481500] flex items-center justify-center relative"
+      className="min-h-screen bg-gradient-to-b from-[#0a0a0a] to-[#000000] flex items-center justify-center relative"
     >
       <div className="max-w-7xl mx-auto px-8 text-center">
         <motion.div
@@ -236,10 +236,10 @@ const MediaMentionsSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-white/60 leading-none tracking-tight mb-12">
+          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-gray-200/70 leading-none tracking-tight mb-12">
             MEDIA
           </h1>
-          <p className="text-white/50 text-lg max-w-3xl mx-auto font-light leading-relaxed mb-16">
+          <p className="text-gray-300/60 text-lg max-w-3xl mx-auto font-light leading-relaxed mb-16">
             Featured across leading publications for our innovative approach to visual storytelling
           </p>
         </motion.div>
@@ -251,7 +251,7 @@ const MediaMentionsSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.3 + (index * 0.1) }}
-              className="text-white/40 text-sm font-light tracking-wider hover:text-white/60 transition-colors cursor-pointer p-4 bg-white/5 rounded-lg backdrop-blur-sm"
+              className="text-gray-400/50 text-sm font-light tracking-wider hover:text-gray-300/70 transition-colors cursor-pointer p-4 bg-gray-900/20 rounded-lg backdrop-blur-sm"
             >
               {mention}
             </motion.div>
@@ -263,10 +263,10 @@ const MediaMentionsSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 1.5 }}
         >
-          <div className="text-white/30 text-lg tracking-[0.2em] font-light mb-4">
+          <div className="text-gray-400/40 text-lg tracking-[0.2em] font-light mb-4">
             GLOBAL MEDIA COVERAGE
           </div>
-          <div className="text-white/20 text-sm tracking-widest font-light">
+          <div className="text-gray-500/30 text-sm tracking-widest font-light">
             SHAPING THE FUTURE OF VISUAL STORYTELLING
           </div>
         </motion.div>
