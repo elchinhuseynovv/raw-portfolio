@@ -29,7 +29,7 @@ const AboutHeroSection = () => {
   return (
     <section 
       ref={ref}
-      className="min-h-screen bg-gradient-to-b from-[#F5DDD1] via-[#E8C4B0] to-[#DEB499] flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen bg-gradient-to-b from-[#1a1a1a] via-[#111111] to-[#0a0a0a] flex items-center justify-center relative overflow-hidden"
     >
       <div className="text-center px-4 max-w-7xl mx-auto">
         <motion.div
@@ -38,14 +38,14 @@ const AboutHeroSection = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="relative"
         >
-          <h1 className="text-[8rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] font-black text-white/70 leading-none tracking-tight">
+          <h1 className="text-[8rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] font-black text-gray-200/80 leading-none tracking-tight">
             ABOUT
           </h1>
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-            className="text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-black text-white/50 leading-none tracking-tight -mt-8"
+            className="text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-black text-gray-300/60 leading-none tracking-tight -mt-8"
           >
             VOID STUDIOS
           </motion.h2>
@@ -55,7 +55,7 @@ const AboutHeroSection = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 1, delay: 0.8 }}
-          className="text-white/60 text-lg md:text-xl mt-12 max-w-3xl mx-auto font-light tracking-wide leading-relaxed"
+          className="text-gray-300/70 text-lg md:text-xl mt-12 max-w-3xl mx-auto font-light tracking-wide leading-relaxed"
         >
           We are an Emmy® award-winning creative studio specializing in sustainable storytelling. Our mission is to transform how brands connect with audiences through authentic, cinematic narratives that drive both engagement and revenue.
         </motion.p>
@@ -73,7 +73,7 @@ const StorySection = () => {
   return (
     <section 
       ref={ref}
-      className="min-h-screen bg-gradient-to-b from-[#DEB499] to-[#D1A887] flex items-center justify-center relative"
+      className="min-h-screen bg-gradient-to-b from-[#0a0a0a] to-[#000000] flex items-center justify-center relative"
     >
       <div className="max-w-7xl mx-auto px-8 flex items-center justify-between">
         <motion.div
@@ -82,13 +82,13 @@ const StorySection = () => {
           transition={{ duration: 1.2, delay: 0.2 }}
           className="flex-1 pr-12"
         >
-          <h1 className="text-[4rem] md:text-[6rem] lg:text-[8rem] font-black text-white/80 leading-none tracking-tight mb-8">
+          <h1 className="text-[4rem] md:text-[6rem] lg:text-[8rem] font-black text-gray-200/90 leading-none tracking-tight mb-8">
             OUR STORY
           </h1>
-          <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed max-w-2xl mb-8">
+          <p className="text-gray-300/80 text-lg md:text-xl font-light leading-relaxed max-w-2xl mb-8">
             Founded with a vision to revolutionize storytelling in the digital age, Void Studios has grown from a small creative collective to an internationally recognized production house.
           </p>
-          <p className="text-white/60 text-lg font-light leading-relaxed max-w-2xl">
+          <p className="text-gray-300/70 text-lg font-light leading-relaxed max-w-2xl">
             With over 25 years of combined experience and 500+ billion views across all platforms, we've crafted narratives for luxury travel brands, tourism boards, and Fortune 500 companies.
           </p>
         </motion.div>
@@ -105,7 +105,7 @@ const StorySection = () => {
               alt="Our Story"
               className="w-full h-96 object-cover rounded-2xl shadow-2xl"
             />
-            <div className="absolute inset-0 bg-black/20 rounded-2xl" />
+            <div className="absolute inset-0 bg-black/30 rounded-2xl" />
           </div>
         </motion.div>
       </div>
@@ -140,7 +140,7 @@ const TeamSection = () => {
   return (
     <section 
       ref={ref}
-      className="min-h-screen bg-gradient-to-b from-[#D1A887] to-[#C8956D] flex items-center justify-center relative"
+      className="min-h-screen bg-gradient-to-b from-[#000000] to-[#0a0a0a] flex items-center justify-center relative"
     >
       <div className="max-w-7xl mx-auto px-8 text-center">
         <motion.div
@@ -148,7 +148,7 @@ const TeamSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-white/60 leading-none tracking-tight mb-16">
+          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-gray-200/70 leading-none tracking-tight mb-16">
             TEAM
           </h1>
         </motion.div>
@@ -168,10 +168,10 @@ const TeamSection = () => {
                   alt={member.name}
                   className="w-64 h-64 object-cover rounded-full mx-auto shadow-2xl group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black/20 rounded-full group-hover:bg-black/10 transition-all duration-500" />
+                <div className="absolute inset-0 bg-black/30 rounded-full group-hover:bg-black/20 transition-all duration-500" />
               </div>
-              <h3 className="text-2xl font-bold text-white/80 mb-2">{member.name}</h3>
-              <p className="text-white/60 font-light">{member.role}</p>
+              <h3 className="text-2xl font-bold text-gray-200/90 mb-2">{member.name}</h3>
+              <p className="text-gray-300/70 font-light">{member.role}</p>
             </motion.div>
           ))}
         </div>
@@ -208,7 +208,7 @@ const ValuesSection = () => {
   return (
     <section 
       ref={ref}
-      className="min-h-screen bg-gradient-to-b from-[#C8956D] to-[#481500] flex items-center justify-center relative"
+      className="min-h-screen bg-gradient-to-b from-[#0a0a0a] to-[#000000] flex items-center justify-center relative"
     >
       <div className="max-w-7xl mx-auto px-8">
         <motion.div
@@ -217,10 +217,10 @@ const ValuesSection = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="text-center mb-20"
         >
-          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-white/60 leading-none tracking-tight mb-8">
+          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-gray-200/70 leading-none tracking-tight mb-8">
             VALUES
           </h1>
-          <p className="text-white/50 text-lg max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-gray-300/60 text-lg max-w-3xl mx-auto font-light leading-relaxed">
             Our core values guide every decision, every frame, and every story we tell.
           </p>
         </motion.div>
@@ -234,10 +234,10 @@ const ValuesSection = () => {
               transition={{ duration: 1, delay: 0.4 + (index * 0.2) }}
               className="text-center p-8"
             >
-              <h3 className="text-3xl md:text-4xl font-black text-white/70 mb-6 tracking-wider">
+              <h3 className="text-3xl md:text-4xl font-black text-gray-200/80 mb-6 tracking-wider">
                 {value.title}
               </h3>
-              <p className="text-white/60 text-lg font-light leading-relaxed">
+              <p className="text-gray-300/70 text-lg font-light leading-relaxed">
                 {value.description}
               </p>
             </motion.div>
