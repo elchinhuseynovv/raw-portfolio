@@ -70,14 +70,14 @@ const Header = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <motion.div 
-          className="text-white text-2xl font-light tracking-wider cursor-pointer"
+          className="text-gray-200 text-2xl font-light tracking-wider cursor-pointer"
           whileHover={{ scale: 1.05 }}
           onClick={closeMenu}
         >
           VOID
         </motion.div>
         <motion.div 
-          className="text-white text-sm font-light tracking-widest cursor-pointer hover:text-gray-300 transition-colors"
+          className="text-gray-200 text-sm font-light tracking-widest cursor-pointer hover:text-gray-300 transition-colors"
           whileHover={{ scale: 1.05 }}
           onClick={toggleMenu}
         >
@@ -109,14 +109,14 @@ const NavigationMenu = ({ isOpen, onClose }) => {
 
   return (
     <motion.div
-      className={`fixed inset-0 z-[100] bg-gradient-to-b from-[#F5DDD1] to-[#DEB499] ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
+      className={`fixed inset-0 z-[100] bg-gradient-to-b from-[#0a0a0a] to-[#000000] ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: isOpen ? 1 : 0 }}
       transition={{ duration: 0.5 }}
     >
       {/* Close Button */}
       <motion.button
-        className="absolute top-8 right-8 text-white text-2xl font-light hover:text-gray-300 transition-colors z-[110]"
+        className="absolute top-8 right-8 text-gray-200 text-2xl font-light hover:text-gray-400 transition-colors z-[110]"
         onClick={onClose}
         initial={{ opacity: 0, rotate: -90 }}
         animate={{ opacity: isOpen ? 1 : 0, rotate: isOpen ? 0 : -90 }}
@@ -128,7 +128,7 @@ const NavigationMenu = ({ isOpen, onClose }) => {
 
       {/* VOID Logo */}
       <motion.div
-        className="absolute top-8 left-8 text-white text-2xl font-light tracking-wider cursor-pointer"
+        className="absolute top-8 left-8 text-gray-200 text-2xl font-light tracking-wider cursor-pointer"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}
         transition={{ duration: 0.5, delay: isOpen ? 0.1 : 0 }}
@@ -180,7 +180,7 @@ const HoverSlideText = ({ text, onClick }) => {
       onClick={onClick}
     >
       <motion.div
-        className="text-[4rem] md:text-[5rem] font-black text-white/80 leading-none tracking-tight"
+        className="text-[4rem] md:text-[5rem] font-black text-gray-300/90 leading-none tracking-tight"
         animate={{
           y: isHovered ? '-100%' : '0%',
         }}
@@ -192,7 +192,7 @@ const HoverSlideText = ({ text, onClick }) => {
         {text}
       </motion.div>
       <motion.div
-        className="absolute top-0 left-0 text-[4rem] md:text-[5rem] font-black text-white leading-none tracking-tight"
+        className="absolute top-0 left-0 text-[4rem] md:text-[5rem] font-black text-gray-100 leading-none tracking-tight"
         animate={{
           y: isHovered ? '0%' : '100%',
         }}
