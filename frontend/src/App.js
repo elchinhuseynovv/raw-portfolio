@@ -128,27 +128,13 @@ const NavigationMenu = ({ isOpen, onClose }) => {
 
       {/* Logo */}
       <motion.div
-        className="absolute top-8 left-8 cursor-pointer"
+        className="absolute top-8 left-8 cursor-pointer text-gray-200 text-xl font-bold tracking-wider"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}
         transition={{ duration: 0.5, delay: isOpen ? 0.1 : 0 }}
         onClick={() => handleNavigation('/home', 'HOME')}
       >
-        <img 
-          src="https://raw.githubusercontent.com/elchinhuseynovv/raw-portfolio/main/Raw%20Media%20Project/Raw%20Visual%20Studio%20.png" 
-          alt="Raw Visual Studio Logo" 
-          className="h-8 w-auto brightness-90"
-          onError={(e) => {
-            e.target.style.display = 'none';
-            e.target.nextSibling.style.display = 'block';
-          }}
-        />
-        <div 
-          className="text-gray-200 text-2xl font-light tracking-wider hidden"
-          style={{ display: 'none' }}
-        >
-          RAW VISUAL STUDIO
-        </div>
+        RAW VISUAL STUDIO
       </motion.div>
 
       {/* Navigation Items */}
