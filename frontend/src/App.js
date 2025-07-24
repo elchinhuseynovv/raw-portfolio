@@ -77,7 +77,7 @@ const Header = () => {
           <img 
             src="/raw-visual-studio-logo.png" 
             alt="Raw Visual Studio Logo" 
-            className="h-12 w-auto brightness-90"
+            className="h-16 w-auto brightness-90"
           />
         </motion.div>
         <motion.div 
