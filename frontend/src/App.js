@@ -130,15 +130,19 @@ const NavigationMenu = ({ isOpen, onClose }) => {
         ✕
       </motion.button>
 
-      {/* VOID Logo */}
+      {/* Logo */}
       <motion.div
-        className="absolute top-8 left-8 text-gray-200 text-2xl font-light tracking-wider cursor-pointer"
+        className="absolute top-8 left-8 cursor-pointer"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}
         transition={{ duration: 0.5, delay: isOpen ? 0.1 : 0 }}
         onClick={() => handleNavigation('/home', 'HOME')}
       >
-        VOID
+        <img 
+          src="https://raw.githubusercontent.com/elchinhuseynovv/raw-portfolio/main/Raw%20Media%20Project/Raw%20Visual%20Studio%20.png" 
+          alt="Raw Visual Studio Logo" 
+          className="h-8 w-auto brightness-90"
+        />
       </motion.div>
 
       {/* Navigation Items */}
