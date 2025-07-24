@@ -75,7 +75,13 @@ export const LoadingScreen = ({ isVisible }) => {
         transition={{ duration: 0.8 }}
         className="text-center"
       >
-        <div className="text-5xl font-black text-white/70 mb-4">RAW VISUAL</div>
+        <div className="mb-4 flex justify-center">
+          <img 
+            src="/raw-visual-studio-logo.png" 
+            alt="Raw Visual Studio Logo" 
+            className="h-20 w-auto brightness-75"
+          />
+        </div>
         <div className="text-xl text-white/50 tracking-widest">STUDIOS</div>
       </motion.div>
     </motion.div>
