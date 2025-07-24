@@ -139,7 +139,7 @@ const NavigationMenu = ({ isOpen, onClose }) => {
         onClick={() => handleNavigation('/home', 'HOME')}
       >
         <img 
-          src="/raw-visual-studio-logo.svg" 
+          src="/raw-visual-studio-logo.png" 
           alt="Raw Visual Studio Logo" 
           className="h-8 w-auto brightness-90"
         />
