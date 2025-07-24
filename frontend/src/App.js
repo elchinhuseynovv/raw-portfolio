@@ -132,13 +132,17 @@ const NavigationMenu = ({ isOpen, onClose }) => {
 
       {/* Logo */}
       <motion.div
-        className="absolute top-8 left-8 cursor-pointer text-gray-200 text-xl font-bold tracking-wider"
+        className="absolute top-8 left-8 cursor-pointer"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}
         transition={{ duration: 0.5, delay: isOpen ? 0.1 : 0 }}
         onClick={() => handleNavigation('/home', 'HOME')}
       >
-        RAW VISUAL STUDIO
+        <img 
+          src="/raw-visual-studio-logo.png" 
+          alt="Raw Visual Studio Logo" 
+          className="h-8 w-auto brightness-90"
+        />
       </motion.div>
 
       {/* Navigation Items */}
