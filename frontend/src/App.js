@@ -78,7 +78,17 @@ const Header = () => {
             src="https://raw.githubusercontent.com/elchinhuseynovv/raw-portfolio/main/Raw%20Media%20Project/Raw%20Visual%20Studio%20.png" 
             alt="Raw Visual Studio Logo" 
             className="h-8 w-auto brightness-90"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'block';
+            }}
           />
+          <div 
+            className="text-gray-200 text-2xl font-light tracking-wider hidden"
+            style={{ display: 'none' }}
+          >
+            RAW VISUAL STUDIO
+          </div>
         </motion.div>
         <motion.div 
           className="text-gray-200 text-sm font-light tracking-widest cursor-pointer hover:text-gray-300 transition-colors"
