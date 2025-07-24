@@ -77,7 +77,7 @@ export const LoadingScreen = ({ isVisible }) => {
       >
         <div className="mb-4 flex justify-center">
           <img 
-            src="/raw-visual-studio-logo.png" 
+            src="/raw-visual-studio-logo.svg" 
             alt="Raw Visual Studio Logo" 
             className="h-20 w-auto brightness-75"
           />
