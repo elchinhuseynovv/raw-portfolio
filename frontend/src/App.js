@@ -75,7 +75,7 @@ const Header = () => {
           onClick={closeMenu}
         >
           <img 
-            src="/raw-visual-studio-logo.png" 
+            src="/raw-visual-studio-logo.svg" 
             alt="Raw Visual Studio Logo" 
             className="h-8 w-auto brightness-90"
           />
