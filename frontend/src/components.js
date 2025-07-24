@@ -75,7 +75,13 @@ export const LoadingScreen = ({ isVisible }) => {
         transition={{ duration: 0.8 }}
         className="text-center"
       >
-        <div className="text-6xl font-black text-white/70 mb-4">VOID</div>
+        <div className="mb-4 flex justify-center">
+          <img 
+            src="https://raw.githubusercontent.com/elchinhuseynovv/raw-portfolio/main/Raw%20Media%20Project/Raw%20Visual%20Studio%20.png" 
+            alt="Raw Visual Studio Logo" 
+            className="h-20 w-auto brightness-75"
+          />
+        </div>
         <div className="text-xl text-white/50 tracking-widest">STUDIOS</div>
       </motion.div>
     </motion.div>
