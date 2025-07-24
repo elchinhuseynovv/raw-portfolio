@@ -75,18 +75,7 @@ export const LoadingScreen = ({ isVisible }) => {
         transition={{ duration: 0.8 }}
         className="text-center"
       >
-        <div className="mb-4 flex justify-center">
-          <img 
-            src="https://raw.githubusercontent.com/elchinhuseynovv/raw-portfolio/main/Raw%20Media%20Project/Raw%20Visual%20Studio%20.png" 
-            alt="Raw Visual Studio Logo" 
-            className="h-20 w-auto brightness-75"
-            onError={(e) => {
-              e.target.style.display = 'none';
-              e.target.nextSibling.style.display = 'block';
-            }}
-          />
-          <div className="text-6xl font-black text-white/70 mb-4 hidden" style={{ display: 'none' }}>RAW VISUAL</div>
-        </div>
+        <div className="text-5xl font-black text-white/70 mb-4">RAW VISUAL</div>
         <div className="text-xl text-white/50 tracking-widest">STUDIOS</div>
       </motion.div>
     </motion.div>
