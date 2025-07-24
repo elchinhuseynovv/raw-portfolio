@@ -141,7 +141,7 @@ const NavigationMenu = ({ isOpen, onClose }) => {
         <img 
           src="/raw-visual-studio-logo.png" 
           alt="Raw Visual Studio Logo" 
-          className="h-8 w-auto brightness-90"
+          className="h-12 w-auto brightness-90"
         />
       </motion.div>
 
