@@ -106,7 +106,7 @@ const EmmySection = () => {
           className="relative"
         >
           <h1 className="text-[8rem] md:text-[12rem] lg:text-[16rem] xl:text-[24rem] font-black text-gray-200/70 leading-none tracking-tight">
-            EMMY
+            GERETY
           </h1>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -115,7 +115,7 @@ const EmmySection = () => {
             className="absolute -bottom-8 left-1/2 transform -translate-x-1/2"
           >
             <div className="text-gray-300/60 text-xl tracking-[0.2em] font-light">
-              AWARD-WINNING
+              AWARDS WINNER
             </div>
           </motion.div>
         </motion.div>
@@ -164,8 +164,8 @@ const ServicesGrid = () => {
       bgColor: "from-[#1a1a1a] to-[#222222]"
     },
     {
-      title: "GEN Z GEN ALPHA",
-      description: "Designing content and campaigns tailored for newer generations with fresh perspectives.",
+      title: "FASHION / EMERGING EUROPE",
+      description: "We’ve worked with and captured fashion brands that blend craftsmanship, authenticity, and fresh vision—spanning Italy, France, Czech Republic and Georgia.",
       image: "https://images.unsplash.com/photo-1664277497084-92c27082bc08?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxzdHJlYW1pbmclMjBjb250ZW50fGVufDB8fHx8MTc1MjkyNTk2OXww&ixlib=rb-4.1.0&q=85",
       bgColor: "from-[#222222] to-[#2a2a2a]"
     },

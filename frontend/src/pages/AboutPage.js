@@ -47,7 +47,7 @@ const AboutHeroSection = () => {
             transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
             className="text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-black text-gray-300/60 leading-none tracking-tight -mt-8"
           >
-            VOID STUDIOS
+            RAW VISUAL STUDIO
           </motion.h2>
         </motion.div>
         
@@ -57,7 +57,7 @@ const AboutHeroSection = () => {
           transition={{ duration: 1, delay: 0.8 }}
           className="text-gray-300/70 text-lg md:text-xl mt-12 max-w-3xl mx-auto font-light tracking-wide leading-relaxed"
         >
-          We are an Emmy® award-winning creative studio specializing in sustainable storytelling. Our mission is to transform how brands connect with audiences through authentic, cinematic narratives that drive both engagement and revenue.
+          We’ve been crafting visuals for over 11 years, long before algorithms cared. Our online presence might trace back just five, but our roots run deep in the underground scenes, backstage chaos, and brand stories most cameras miss. From gritty warehouse raves to polished hotel suites, we film what others overlook and we do it with cinematic precision, emotional weight, and raw intent.
         </motion.p>
       </div>
     </section>
@@ -86,10 +86,11 @@ const StorySection = () => {
             OUR STORY
           </h1>
           <p className="text-gray-300/80 text-lg md:text-xl font-light leading-relaxed max-w-2xl mb-8">
-            Founded with a vision to revolutionize storytelling in the digital age, Void Studios has grown from a small creative collective to an internationally recognized production house.
+            Born in the shadows of underground raves and abandoned warehouses, Raw Visual Studio began as a passion project capturing raw, unfiltered energy where most cameras wouldn’t dare to go.
           </p>
           <p className="text-gray-300/70 text-lg font-light leading-relaxed max-w-2xl">
-            With over 25 years of combined experience and 500+ billion views across all platforms, we've crafted narratives for luxury travel brands, tourism boards, and Fortune 500 companies.
+            Fast forward to now, our lens has traveled far beyond the dance floor. From documenting war zones to working with luxury travel brands, from music festivals to government campaigns, fashion shows to private weddings  we’ve shot it all. We don’t just create content  we craft emotion, energy, and moments that last.
+            With over 15 million views and counting, Raw Visual Studio has grown into a trusted name across industries. Whether it’s a global brand launch or a secret warehouse party, we tell stories that punch through the noise.
           </p>
         </motion.div>
         
@@ -121,18 +122,18 @@ const TeamSection = () => {
 
   const teamMembers = [
     {
-      name: "Creative Directors",
-      role: "Visionary Leadership",
-      image: "https://images.unsplash.com/photo-1588747020836-451633b46e87"
+      name: "Huseyn Gurbanli",
+      role: "Production Team",
+      image: "https://github.com/elchinhuseynovv/raw-portfolio/blob/main/Raw%20Media%20Project/DSC08851.jpg"
     },
     {
-      name: "Production Team",
-      role: "Technical Excellence",
-      image: "https://images.unsplash.com/photo-1586425254691-f556554aeb12"
+      name: "Mukhtar",
+      role: "Creative Director",
+      image: "https://github.com/elchinhuseynovv/raw-portfolio/blob/a33d66b40d05a0440ff33bd3429534948631a6d7/Raw%20Media%20Project/DSC08832.jpg"
     },
     {
       name: "Story Architects",
-      role: "Narrative Crafting",
+      role: "Colorist",
       image: "https://images.unsplash.com/photo-1586425254904-66e1576a340a"
     }
   ];
