@@ -105,20 +105,17 @@
 user_problem_statement: "Update team member images to use working URLs from uploaded assets instead of broken GitHub links."
 
 frontend:
-  - task: "Navigation Update - Change TEAM to ABOUT and Remove Team Text"
+  - task: "Team Images Update - Fix Broken GitHub URLs"
     implemented: true
-    working: true
-    file: "/app/frontend/src/App.js, /app/frontend/src/pages/AboutPage.js"
+    working: "NA"
+    file: "/app/frontend/src/pages/AboutPage.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
-          comment: "✅ NAVIGATION AND TEAM SECTION UPDATED SUCCESSFULLY - Made two key changes: 1) Navigation Menu: Changed 'TEAM' navigation item back to 'ABOUT' and updated the path to '/about' in the menuItems array in App.js. 2) Team Section: Removed the large 'TEAM' heading text from the TeamSection component in AboutPage.js while preserving the team member grid layout and animations. The team member information (Huseyn Gurbanli, Mukhtar, Story Architects) is now seamlessly integrated into the About page without the prominent heading. All animations, hover effects, and styling remain intact. The About page now contains the team information as part of the overall about content."
-        - working: true
-          agent: "testing"
-          comment: "✅ COMPREHENSIVE TESTING COMPLETED SUCCESSFULLY - All requested functionality verified: 1) Navigation Menu: 'GIMME MORE ✦✦✦' button opens menu correctly, navigation shows ABOUT instead of TEAM (✅ ABOUT visible, ✅ TEAM not visible), all 7 navigation items present (HOME, ABOUT, GALLERY, CLIENTS, SERVICES, PRESETS, CONTACT). 2) About Page Navigation: Clicking ABOUT successfully navigates to /about page, URL changes correctly. 3) About Page Content: Main ABOUT heading displays, Story section loads properly, Values section visible and functional. 4) Team Section Integration: ✅ NO large 'TEAM' heading found (correctly removed), all three team members visible (Huseyn Gurbanli - Production Team, Mukhtar - Creative Director, Story Architects - Colorist), team information seamlessly integrated into About page flow. 5) Responsive Design: Tested across desktop (1920x1080), tablet (768x1024), and mobile (390x844) viewports - all working correctly. 6) Menu Functionality: Close button (✕) works, logo click closes menu, navigation item clicks work properly. Minor: Team member hover effects have overlay interference but don't affect core functionality. All primary requirements successfully implemented and working."
+          comment: "✅ TEAM IMAGES UPDATED SUCCESSFULLY - Fixed broken GitHub image links by updating the teamMembers array with working asset URLs. Updated Huseyn Gurbanli's image to use DSC08851.jpg (https://customer-assets.emergentagent.com/job_gallery-showcase-5/artifacts/aewl3dea_DSC08851.jpg) and Mukhtar's image to use DSC08796.jpg (https://customer-assets.emergentagent.com/job_gallery-showcase-5/artifacts/skl9c6h5_DSC08796.jpg). The Story Architects image remains as the working Unsplash URL. All team member images should now load properly on the About page without any broken image links."
 
 metadata:
   created_by: "testing_agent"
