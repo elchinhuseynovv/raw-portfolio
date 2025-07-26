@@ -127,7 +127,7 @@ const TeamSection = () => {
       image: "https://customer-assets.emergentagent.com/job_gallery-showcase-5/artifacts/aewl3dea_DSC08851.jpg"
     },
     {
-      name: "Mukhtar",
+      name: "Mukhtar Hasanov",
       role: "Creative Director",
       image: "https://customer-assets.emergentagent.com/job_gallery-showcase-5/artifacts/skl9c6h5_DSC08796.jpg"
     },
