@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Replace the current VOID logo with Raw Visual Studio PNG logo from Github path and remove all instances of the VOID branding."
+user_problem_statement: "Update navigation menu to show: HOME, TEAM, GALLERY, CLIENTS, SERVICES, PRESETS, CONTACT instead of current navigation items."
 
 frontend:
   - task: "Logo Replacement - Raw Visual Studio Logo Implementation"
