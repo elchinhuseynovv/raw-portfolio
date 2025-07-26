@@ -124,12 +124,12 @@ const TeamSection = () => {
     {
       name: "Huseyn Gurbanli",
       role: "Production Team",
-      image: "https://github.com/elchinhuseynovv/raw-portfolio/blob/main/Raw%20Media%20Project/DSC08851.jpg"
+      image: "https://customer-assets.emergentagent.com/job_gallery-showcase-5/artifacts/aewl3dea_DSC08851.jpg"
     },
     {
       name: "Mukhtar",
       role: "Creative Director",
-      image: "https://github.com/elchinhuseynovv/raw-portfolio/blob/a33d66b40d05a0440ff33bd3429534948631a6d7/Raw%20Media%20Project/DSC08832.jpg"
+      image: "https://customer-assets.emergentagent.com/job_gallery-showcase-5/artifacts/skl9c6h5_DSC08796.jpg"
     },
     {
       name: "Story Architects",
