@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Update navigation menu to show: HOME, TEAM, GALLERY, CLIENTS, SERVICES, PRESETS, CONTACT instead of current navigation items."
+user_problem_statement: "Change navigation from TEAM to ABOUT, remove Team text from section, and connect it with About page."
 
 frontend:
   - task: "Navigation Menu Update - New Menu Items Implementation"
