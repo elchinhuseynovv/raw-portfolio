@@ -99,7 +99,7 @@ const NavigationMenu = ({ isOpen, onClose }) => {
   const navigate = useNavigate();
   const menuItems = [
     { name: 'HOME', path: '/home' },
-    { name: 'TEAM', path: '/team' },
+    { name: 'ABOUT', path: '/about' },
     { name: 'GALLERY', path: '/gallery' },
     { name: 'CLIENTS', path: '/clients' },
     { name: 'SERVICES', path: '/services' },
