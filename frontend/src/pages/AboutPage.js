@@ -144,16 +144,6 @@ const TeamSection = () => {
       className="min-h-screen bg-gradient-to-b from-[#000000] to-[#0a0a0a] flex items-center justify-center relative"
     >
       <div className="max-w-7xl mx-auto px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-        >
-          <h1 className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-black text-gray-200/70 leading-none tracking-tight mb-16">
-            TEAM
-          </h1>
-        </motion.div>
-        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
           {teamMembers.map((member, index) => (
             <motion.div
