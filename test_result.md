@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Change navigation from TEAM to ABOUT, remove Team text from section, and connect it with About page."
+user_problem_statement: "Update team member images to use working URLs from uploaded assets instead of broken GitHub links."
 
 frontend:
   - task: "Navigation Update - Change TEAM to ABOUT and Remove Team Text"
