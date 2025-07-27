@@ -10,6 +10,7 @@ import AboutPage from './pages/AboutPage';
 import VideosPage from './pages/VideosPage';
 import ForbesPage from './pages/ForbesPage';
 import ContactPage from './pages/ContactPage';
+import PresetsPage from './pages/PresetsPage';
 import CustomCursor from './components/CustomCursor';
 
 const App = () => {
