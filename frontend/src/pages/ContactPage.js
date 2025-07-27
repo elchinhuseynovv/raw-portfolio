@@ -209,17 +209,17 @@ const OfficeInfoSection = () => {
   const contactInfo = [
     {
       title: "EMAIL",
-      details: ["hello@voidstudios.com", "projects@voidstudios.com"],
+      details: ["info@rawvisualstudio.com", "projects@rawvisualstudio.com"],
       icon: "✉"
     },
     {
       title: "PHONE",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
+      details: ["+48 (555) 123-4567",],
       icon: "☎"
     },
     {
       title: "OFFICE",
-      details: ["123 Creative District", "Los Angeles, CA 90210"],
+      details: ["123 Creative District", "Warsaw, Poland"],
       icon: "📍"
     }
   ];
@@ -292,11 +292,11 @@ const ConnectSection = () => {
   });
 
   const socialLinks = [
-    { name: "INSTAGRAM", handle: "@voidstudios" },
-    { name: "LINKEDIN", handle: "/company/void-studios" },
-    { name: "TWITTER", handle: "@voidstudios" },
-    { name: "VIMEO", handle: "/voidstudios" },
-    { name: "YOUTUBE", handle: "/voidstudios" }
+    { name: "INSTAGRAM", handle: "@raw_visualstudio" },
+    { name: "LINKEDIN", handle: "/company/rawvisualstudio" },
+    { name: "X", handle: "@raw_visualstudio" },
+    { name: "FACEBOOK", handle: "@raw_visualstudio" },
+    { name: "YOUTUBE", handle: "@raw_visualstudio" }
   ];
 
   return (
@@ -343,7 +343,7 @@ const ConnectSection = () => {
             LET'S CREATE SOMETHING EXTRAORDINARY
           </div>
           <div className="text-gray-500/30 text-sm tracking-widest font-light">
-            © 2025 VOID STUDIOS • SUSTAINABLE STORYTELLING
+            © 2025 Raw Visual Studio • SUSTAINABLE STORYTELLING
           </div>
         </motion.div>
       </div>

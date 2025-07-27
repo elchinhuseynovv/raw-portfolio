@@ -87,7 +87,7 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.8 }}
           className="text-gray-300/70 text-lg md:text-xl mt-12 max-w-3xl mx-auto font-light tracking-wide"
         >
-          Professional-grade presets and LUTs crafted by our EMMY® award-winning team. Transform your photos and videos with the same color grading techniques used in our acclaimed productions.
+          Professional-grade presets and LUTs crafted by our team. Transform your photos and videos with the same color grading techniques used in our acclaimed productions.
         </motion.p>
         
         <motion.div
