@@ -6,9 +6,10 @@ import os
 import logging
 from pathlib import Path
 from pydantic import BaseModel, Field
-from typing import List
+from typing import List, Optional
 import uuid
 from datetime import datetime
+from enum import Enum
 
 
 ROOT_DIR = Path(__file__).parent
@@ -34,6 +35,34 @@ class StatusCheck(BaseModel):
 
 class StatusCheckCreate(BaseModel):
     client_name: str
+
+class PresetType(str, Enum):
+    PRESET = "preset"
+    LUT = "lut"
+
+class Preset(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    name: str
+    description: str
+    price: float
+    type: PresetType
+    preview_image: str
+    preview_images: List[str] = []
+    file_count: int
+    compatibility: List[str] = []
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+    featured: bool = False
+
+class PresetCreate(BaseModel):
+    name: str
+    description: str
+    price: float
+    type: PresetType
+    preview_image: str
+    preview_images: List[str] = []
+    file_count: int
+    compatibility: List[str] = []
+    featured: bool = False
 
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
