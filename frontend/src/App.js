@@ -11,6 +11,7 @@ import VideosPage from './pages/VideosPage';
 import ForbesPage from './pages/ForbesPage';
 import ContactPage from './pages/ContactPage';
 import PresetsPage from './pages/PresetsPage';
+import ClientsPage from './pages/ClientsPage';
 import CustomCursor from './components/CustomCursor';
 
 const App = () => {
