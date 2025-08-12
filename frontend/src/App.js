@@ -89,7 +89,7 @@ const Header = () => {
           whileHover={{ scale: 1.05 }}
           onClick={toggleMenu}
         >
-          GIMME MORE ✦✦✦
+          BRING IT ON ✦✦✦
         </motion.div>
       </motion.header>
 
