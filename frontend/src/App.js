@@ -12,6 +12,8 @@ import ForbesPage from './pages/ForbesPage';
 import ContactPage from './pages/ContactPage';
 import PresetsPage from './pages/PresetsPage';
 import ClientsPage from './pages/ClientsPage';
+import GalleryPage from './pages/GalleryPage';
+import ServicesPage from './pages/ServicesPage';
 import CustomCursor from './components/CustomCursor';
 
 const App = () => {
