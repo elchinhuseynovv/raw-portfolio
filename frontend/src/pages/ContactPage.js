@@ -292,11 +292,11 @@ const ConnectSection = () => {
   });
 
   const socialLinks = [
-    { name: "INSTAGRAM", handle: "@raw_visualstudio" },
-    { name: "LINKEDIN", handle: "/company/rawvisualstudio" },
-    { name: "X", handle: "@raw_visualstudio" },
-    { name: "FACEBOOK", handle: "@raw_visualstudio" },
-    { name: "YOUTUBE", handle: "@raw_visualstudio" }
+    { name: "INSTAGRAM", handle: "@raw_visualstudio", url: "https://instagram.com/raw_visualstudio" },
+    { name: "LINKEDIN", handle: "/company/rawvisualstudio", url: "https://linkedin.com/company/rawvisualstudio" },
+    { name: "X", handle: "@raw_visualstudio", url: "https://x.com/raw_visualstudio" },
+    { name: "FACEBOOK", handle: "@raw_visualstudio", url: "https://facebook.com/raw_visualstudio" },
+    { name: "YOUTUBE", handle: "@raw_visualstudio", url: "https://youtube.com/@raw_visualstudio" }
   ];
 
   return (
