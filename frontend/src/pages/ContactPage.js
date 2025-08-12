@@ -320,16 +320,19 @@ const ConnectSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-16">
           {socialLinks.map((link, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.3 + (index * 0.1) }}
-              className="bg-gray-900/30 backdrop-blur-sm rounded-xl p-6 hover:bg-gray-900/50 transition-all duration-300 cursor-pointer group"
+              className="bg-gray-900/30 backdrop-blur-sm rounded-xl p-6 hover:bg-gray-900/50 transition-all duration-300 cursor-pointer group block no-underline"
             >
               <h3 className="text-gray-300/80 font-bold mb-2 group-hover:text-gray-200/90 transition-colors">{link.name}</h3>
               <p className="text-gray-400/60 text-sm font-light">{link.handle}</p>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
         
