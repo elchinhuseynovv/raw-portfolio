@@ -68,7 +68,7 @@ const Header = () => {
   return (
     <>
       <motion.header 
-        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-8"
+        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-8 bg-gradient-to-b from-black/20 to-transparent backdrop-blur-sm"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
