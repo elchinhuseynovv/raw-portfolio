@@ -36,23 +36,23 @@ const HeroSection = () => {
   return (
     <section 
       ref={ref}
-      className="min-h-screen bg-gradient-to-b from-[#1a1a1a] via-[#111111] to-[#0a0a0a] flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen bg-gradient-to-b from-[#1a1a1a] via-[#111111] to-[#0a0a0a] flex items-center justify-center relative overflow-hidden pt-32"
     >
-      <div className="text-center px-4 max-w-7xl mx-auto">
+      <div className="text-center px-4 max-w-7xl mx-auto mt-16">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="relative"
+          className="relative mb-8"
         >
-          <h1 className="text-[8rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] font-black text-gray-200/80 leading-none tracking-tight">
+          <h1 className="text-[7rem] md:text-[11rem] lg:text-[15rem] xl:text-[18rem] font-black text-gray-200/80 leading-none tracking-tight">
             SUSTAINABLE
           </h1>
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-            className="text-[8rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] font-black text-gray-200/80 leading-none tracking-tight -mt-8"
+            className="text-[7rem] md:text-[11rem] lg:text-[15rem] xl:text-[18rem] font-black text-gray-200/80 leading-none tracking-tight -mt-6"
           >
             STORYTELLING
           </motion.h2>
