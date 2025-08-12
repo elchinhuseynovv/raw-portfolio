@@ -51,6 +51,8 @@ const VoidStudiosApp = () => {
         <Route path="/presets" element={<PresetsPage />} />
         <Route path="/clients" element={<ClientsPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/services" element={<ServicesPage />} />
       </Routes>
     </div>
   );
