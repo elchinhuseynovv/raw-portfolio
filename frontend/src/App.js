@@ -85,7 +85,7 @@ const Header = () => {
           />
         </motion.div>
         <motion.div 
-          className="text-gray-200 text-sm font-light tracking-widest cursor-pointer hover:text-gray-300 transition-colors"
+          className="text-gray-200 text-sm font-medium tracking-widest cursor-pointer hover:text-white transition-all duration-300 bg-gray-800/30 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-600/30 hover:border-gray-400/50"
           whileHover={{ scale: 1.05 }}
           onClick={toggleMenu}
         >
